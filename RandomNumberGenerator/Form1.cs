@@ -54,11 +54,19 @@ namespace RandomNumberGenerator
                 MessageBox.Show("Seed cannot be Zero!");
                 return;
             }
+            if (length > 50)
+            {
+                MessageBox.Show("Length should be less than 50!");
+                return;
+            }
+        
             for (int i = 0; i < length; i++)
             {
                 number_show.Text += Algorithms.wrapper_func(algorithms_pair[algorithm!]);
                 // Debug.WriteLine(Algorithms.state);
             }
+            Algorithms.seed_update();
+            seed_input.Text = Convert.ToString(Algorithms.seed);
         }
     }
 }

@@ -12,6 +12,11 @@ public class Algorithms
 
 	}
 
+	public static void seed_update()
+	{
+		seed = Convert.ToInt32((state % Convert.ToUInt64(99999)));
+    }
+
 	public static int wrapper_func(RNG algo)
 	{
 		return number_wrapping(0, 9, algo());
