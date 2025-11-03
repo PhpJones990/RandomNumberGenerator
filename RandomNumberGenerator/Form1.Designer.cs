@@ -41,7 +41,7 @@
             algorithm_choice.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             algorithm_choice.Font = new Font("Segoe UI", 12F);
             algorithm_choice.FormattingEnabled = true;
-            algorithm_choice.Items.AddRange(new object[] { "Xorshift" });
+            algorithm_choice.Items.AddRange(new object[] { "Xorshift", "LFSR", "LCG" });
             algorithm_choice.Location = new Point(62, 123);
             algorithm_choice.Name = "algorithm_choice";
             algorithm_choice.Size = new Size(273, 40);
@@ -91,6 +91,7 @@
             // generate_button
             // 
             generate_button.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            generate_button.BackgroundImageLayout = ImageLayout.Stretch;
             generate_button.Font = new Font("Segoe UI", 20F);
             generate_button.Location = new Point(62, 304);
             generate_button.Name = "generate_button";
@@ -104,6 +105,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.MediumTurquoise;
             ClientSize = new Size(794, 426);
             Controls.Add(generate_button);
             Controls.Add(number_show);

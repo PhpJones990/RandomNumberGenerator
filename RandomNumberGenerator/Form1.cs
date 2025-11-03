@@ -17,6 +17,8 @@ namespace RandomNumberGenerator
         {
             InitializeComponent();
             algorithms_pair["Xorshift"] = Algorithms.xorshift;
+            algorithms_pair["LFSR"] = Algorithms.lfsr;
+            algorithms_pair["LCG"] = Algorithms.lcg;
         }
 
         private void algorithm_choice_SelectedIndexChanged(object sender, EventArgs e)

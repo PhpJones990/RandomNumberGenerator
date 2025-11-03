@@ -40,4 +40,27 @@ public class Algorithms
 		state = x;
 		return state;
 	}
+
+	public static ulong lfsr()
+	{
+		if (seed != -1) state = Convert.ToUInt64(seed);
+		seed = -1;
+
+		ulong feedback = ((state >> 31) ^ (state >> 21) ^ (state >> 1) ^ state) & 1;
+		state = (state >> 1) | (feedback << 31);
+
+		return state;
+	}
+
+	public static ulong lcg()
+	{
+        if (seed != -1) state = Convert.ToUInt64(seed);
+        seed = -1;
+
+		ulong x = state;
+		x = (1103515245 * x + 12345) % 2147483648;
+		state = x;
+
+        return state;
+	}
 }
